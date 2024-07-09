@@ -1,34 +1,7 @@
 
 
 <div class="widget">
-  <div *ngIf="isInitialWidgetVisible"> 
-    <div class="title">Long-term Goals</div>
-  <div class="tasks">
-    <div class="task">
-      <div class = "vertical"></div>
-      <div class = "sub">
-        <div class="subtitle">1 year</div>
-          <div class = "texts"> 
-            <div class="text">Secure SWE or UX Engineering Internship</div>
-            
-          </div> 
-        </div> 
-    </div>
-    <div class="task">
-      <div class = "vertical"></div>
-      <div class = "sub1">
-      <div class="subtitle">5 year</div>
-      <div class = "texts"> 
-        <div class="text">SWE with UX/Design/Animation oriented work
-    </div>
-    </div>
-  </div> 
-  </div>
-</div>
-</div>
-  <img class="edit" (click)="toggleModal()" src="/assets/img/edit.svg" width="26" height="26"/>
-  <app-modal *ngIf="isModalVisible"></app-modal>
-  
+  <app-widget [quarterData]="quarterData$ | async"></app-widget>
 </div>
 
   
